@@ -6,9 +6,9 @@ lsp.ensure_installed({
 	'rust_analyzer',
 
     --python (commented out means that it is an option)
-    --'jedi_language_server',
-    'pyre',
-    'pylsp',
+    'jedi_language_server',
+    --'pyre',
+    --'pylsp',
     --'pyright',
     --'pylyzer',
     --'sourcery',
