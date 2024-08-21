@@ -31,6 +31,14 @@ require("mason-lspconfig").setup({
         function(server_name)
           require('lspconfig')[server_name].setup({})
         end,
+        ["tinymist"] = function ()
+            require("lspconfig").tinymist.setup {
+                single_file_support = true,
+                root_dir = function()
+                    return vim.fn.getcwd()
+                end,
+            }
+        end,
     },
 })
 
