@@ -30,7 +30,7 @@ require 'typst-preview'.setup {
   -- required.
   dependencies_bin = {
     -- if you are using tinymist, just set ['typst-preview'] = "tinymist".
-    ['typst-preview'] = nil,
+    ['typst-preview'] = "tinymist",
     ['websocat'] = nil
   },
 
