@@ -10,7 +10,7 @@ vim.keymap.set("n", "<leader>r", [[:w<Enter>:!typst compile %<CR><CR>]])
 
 require 'typst-preview'.setup {
   -- Setting this true will enable printing debug information with print()
-  debug = false,
+  debug = true,
 
   -- Custom format string to open the output link provided with %s
   -- Example: open_cmd = 'firefox %s -P typst-preview --class typst-preview'
@@ -19,7 +19,8 @@ require 'typst-preview'.setup {
   -- Setting this to 'always' will invert black and white in the preview
   -- Setting this to 'auto' will invert depending if the browser has enable
   -- dark mode
-  invert_colors = '{"rest": "always","image": "never"}',
+  --invert_colors = '{"rest": "always","image": "never"}',
+  invert_colors = 'always',
 
   -- Whether the preview will follow the cursor in the source file
   follow_cursor = true,
@@ -30,7 +31,8 @@ require 'typst-preview'.setup {
   -- required.
   dependencies_bin = {
     -- if you are using tinymist, just set ['typst-preview'] = "tinymist".
-    ['typst-preview'] = "tinymist",
+    -- ['typst-preview'] = "tinymist",
+    ['typst-preview'] = nil,
     ['websocat'] = nil
   },
 
