@@ -10,7 +10,7 @@ vim.keymap.set("n", "<leader>r", [[:w<Enter>:!typst compile %<CR><CR>]])
 
 require 'typst-preview'.setup {
   -- Setting this true will enable printing debug information with print()
-  debug = true,
+  debug = false,
 
   -- Custom format string to open the output link provided with %s
   -- Example: open_cmd = 'firefox %s -P typst-preview --class typst-preview'
