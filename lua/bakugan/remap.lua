@@ -28,5 +28,5 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "Q", "<nop>")
 
 -- Saving operations
-vim.keymap.set("n", "<leader>ww", ":w<CR>")
-vim.keymap.set("n", "<leader>wq", ":wq<CR>")
+vim.keymap.set("n", "<leader>ww", ":wa<CR>")
+vim.keymap.set("n", "<leader>wq", ":wqa<CR>")

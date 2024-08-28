@@ -5,7 +5,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 -- Compile
-vim.keymap.set("n", "<leader>r", [[:w<Enter>:!typst compile %<CR><CR>]])
+vim.keymap.set("n", "<leader>r", [[:wa<Enter>:!typst compile %<CR><CR>]])
 
 
 require 'typst-preview'.setup {
