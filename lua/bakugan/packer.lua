@@ -50,7 +50,7 @@ use ({
 
 use {
   'chomosuke/typst-preview.nvim',
-  tag = 'v0.3.*',
+  --tag = 'v0.3.*',
   run = function() require 'typst-preview'.update() end,
 }
 

@@ -19,8 +19,7 @@ require 'typst-preview'.setup {
   -- Setting this to 'always' will invert black and white in the preview
   -- Setting this to 'auto' will invert depending if the browser has enable
   -- dark mode
-  --invert_colors = '{"rest": "always","image": "never"}',
-  invert_colors = 'always',
+  invert_colors = '{"rest": "always","image": "never"}',
 
   -- Whether the preview will follow the cursor in the source file
   follow_cursor = true,
@@ -31,8 +30,7 @@ require 'typst-preview'.setup {
   -- required.
   dependencies_bin = {
     -- if you are using tinymist, just set ['typst-preview'] = "tinymist".
-    -- ['typst-preview'] = "tinymist",
-    ['typst-preview'] = nil,
+    ['typst-preview'] = "tinymist",
     ['websocat'] = nil
   },
 
