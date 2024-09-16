@@ -62,6 +62,13 @@ use {
   requires = { {'nvim-lua/plenary.nvim'} }
 }
 
+use({
+    "stevearc/conform.nvim",
+    config = function()
+    require("conform").setup()
+    end,
+})
+
 if packer_bootstrap then
     require("packer").sync()
 end

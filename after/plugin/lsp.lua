@@ -26,7 +26,7 @@ lsp_zero.extend_lspconfig({
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-    ensure_installed = {"jedi_language_server", "tinymist"},
+    ensure_installed = {"jedi_language_server", "black", "isort", "tinymist"},
     handlers = {
         function(server_name)
           require('lspconfig')[server_name].setup({})
@@ -61,4 +61,16 @@ cmp.setup({
 	['<C-y>'] = cmp.mapping.confirm({ select = true }),
 	["<C-Space>"] = cmp.mapping.complete(),
   }),
+})
+
+-- formatter setup. Ensure all formatters are installed by Mason
+require("conform").setup({
+  formatters_by_ft = {
+    python = { "isort", "black" },
+  },
+
+  format_on_save = {
+    timeout_ms = 500,
+    lsp_format = "fallback"
+  }
 })
