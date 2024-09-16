@@ -23,10 +23,12 @@ lsp_zero.extend_lspconfig({
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
 
-require("mason").setup()
+require("mason").setup({
+    ensure_installed = {"isort", "black"}
+})
 
 require("mason-lspconfig").setup({
-    ensure_installed = {"jedi_language_server", "black", "isort", "tinymist"},
+    ensure_installed = {"jedi_language_server", "tinymist"},
     handlers = {
         function(server_name)
           require('lspconfig')[server_name].setup({})
