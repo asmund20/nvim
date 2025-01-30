@@ -24,7 +24,7 @@ lsp_zero.extend_lspconfig({
 })
 
 require("mason").setup({
-    ensure_installed = {"isort", "black"}
+    ensure_installed = {"isort", "black", "clangd"}
 })
 
 require("mason-lspconfig").setup({
