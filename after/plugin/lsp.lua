@@ -24,11 +24,11 @@ lsp_zero.extend_lspconfig({
 })
 
 require("mason").setup({
-    ensure_installed = {"isort", "black", "clangd"}
+    ensure_installed = {"isort", "black"}
 })
 
 require("mason-lspconfig").setup({
-    ensure_installed = {"jedi_language_server", "tinymist"},
+    ensure_installed = {"jedi_language_server", "tinymist", "clangd"},
     handlers = {
         function(server_name)
           require('lspconfig')[server_name].setup({})
