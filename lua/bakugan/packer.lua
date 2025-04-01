@@ -40,13 +40,16 @@ use {
     requires = { {"nvim-lua/plenary.nvim"} }
 }
 
+-- Colorscheme
 use ({
 	'rose-pine/neovim',
 	as = 'rose-pine',
-	config = function()
-		vim.cmd('colorscheme rose-pine')
-	end
+	--config = function()
+		--vim.cmd('colorscheme rose-pine')
+	--end
 })
+
+
 
 use {
   'chomosuke/typst-preview.nvim',
