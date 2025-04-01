@@ -10,7 +10,7 @@ require("catppuccin").setup({
     dim_inactive = {
         enabled = true, -- dims the background color of inactive window
         shade = "dark",
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
+        percentage = 1, -- percentage of the shade to apply to the inactive window
     },
     no_italic = false, -- Force no italic
     no_bold = false, -- Force no bold
@@ -35,13 +35,28 @@ require("catppuccin").setup({
     default_integrations = true,
     integrations = {
         cmp = true,
-        gitsigns = true,
-        nvimtree = true,
         treesitter = true,
-        notify = false,
-        mini = {
+        mason = true,
+        nvim_surround = true,
+        native_lsp = {
             enabled = true,
-            indentscope_color = "",
+            virtual_text = {
+                errors = { "italic" },
+                hints = { "italic" },
+                warnings = { "italic" },
+                information = { "italic" },
+                ok = { "italic" },
+            },
+            underlines = {
+                errors = { "underline" },
+                hints = { "underline" },
+                warnings = { "underline" },
+                information = { "underline" },
+                ok = { "underline" },
+            },
+            inlay_hints = {
+                background = true,
+            },
         },
         -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
