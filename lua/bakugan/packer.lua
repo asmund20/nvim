@@ -70,6 +70,16 @@ use({
     run = function() vim.fn["mkdp#util#install"]() end,
 })
 
+use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+})
+
 -- Do not write stuff under here
 if packer_bootstrap then
     require("packer").sync()
