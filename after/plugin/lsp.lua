@@ -24,7 +24,7 @@ lsp_zero.extend_lspconfig({
 })
 
 require("mason").setup({
-    ensure_installed = {"isort", "black", "typstyle"}
+    ensure_installed = {"isort", "black"}
 })
 
 require("mason-lspconfig").setup({
@@ -39,6 +39,9 @@ require("mason-lspconfig").setup({
                 root_dir = function()
                     return vim.fn.getcwd()
                 end,
+                settings = {
+                    formatterMode = "typstyle"
+                }
             }
         end,
     },
@@ -69,7 +72,6 @@ cmp.setup({
 require("conform").setup({
   formatters_by_ft = {
     python = { "isort", "black" },
-    typst = { "typstyle" }
   },
 
   format_on_save = {
