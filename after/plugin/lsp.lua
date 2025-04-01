@@ -24,7 +24,7 @@ lsp_zero.extend_lspconfig({
 })
 
 require("mason").setup({
-    ensure_installed = {"isort", "black"}
+    ensure_installed = {"isort", "black", "typstyle"}
 })
 
 require("mason-lspconfig").setup({
@@ -69,6 +69,7 @@ cmp.setup({
 require("conform").setup({
   formatters_by_ft = {
     python = { "isort", "black" },
+    typst = { "typstyle" }
   },
 
   format_on_save = {
