@@ -40,14 +40,7 @@ use {
     requires = { {"nvim-lua/plenary.nvim"} }
 }
 
--- Colorscheme
-use ({
-	'rose-pine/neovim',
-	as = 'rose-pine',
-	--config = function()
-		--vim.cmd('colorscheme rose-pine')
-	--end
-})
+use { "catppuccin/nvim", as = "catppuccin" }
 
 
 
@@ -72,15 +65,10 @@ use({
     end,
 })
 
--- use({"jannis-baum/vivify.vim"})
-
--- install without yarn or npm
 use({
     "iamcco/markdown-preview.nvim",
     run = function() vim.fn["mkdp#util#install"]() end,
 })
-
-
 
 -- Do not write stuff under here
 if packer_bootstrap then
