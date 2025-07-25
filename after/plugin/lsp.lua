@@ -28,7 +28,7 @@ require("mason").setup({
 })
 
 require("mason-lspconfig").setup({
-    ensure_installed = {"jedi_language_server", "tinymist", "clangd"},
+    ensure_installed = {"pylsp", "tinymist", "clangd"},
     handlers = {
         function(server_name)
           require('lspconfig')[server_name].setup({})
