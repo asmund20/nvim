@@ -84,7 +84,7 @@ cmp.setup({
 -- formatter setup. Ensure all formatters are installed by Mason
 require("conform").setup({
   formatters_by_ft = {
-    python = { "autopep8", "black" },
+    python = { "autopep8", "isort" },
   },
 
   format_on_save = {
