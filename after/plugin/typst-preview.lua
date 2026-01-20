@@ -39,3 +39,19 @@ require 'typst-preview'.setup {
     return path_of_buffer
   end,
 }
+
+vim.api.nvim_create_user_command('TypstPreviewLightMode', function()
+  local typst_preview = require("typst-preview")
+  
+  -- Get existing config and override just the invert_colors setting
+  local config = require("typst-preview.config")
+  local new_config = vim.tbl_deep_extend("force", config, {
+    invert_colors = 'never'
+  })
+  
+  typst_preview.setup(new_config)
+  
+  vim.cmd("TypstPreview")
+
+  typst_preview.setup(config)
+end, {})
