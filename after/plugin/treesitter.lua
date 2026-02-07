@@ -1,5 +1,5 @@
-require"nvim-treesitter.configs".setup {
-    ensure_installed = {"python", "lua", "typst", "markdown_inline", "markdown"},
+require "nvim-treesitter".setup {
+    ensure_installed = { "python", "lua", "typst", "markdown_inline", "markdown" },
 
     sync_install = false,
 
