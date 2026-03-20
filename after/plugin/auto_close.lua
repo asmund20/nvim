@@ -10,7 +10,7 @@ require("autoclose").setup({
 		["}"] = { escape = true, close = false, pair = "{}" },
 
 		['"'] = { escape = true, close = true, pair = '""' },
-		["'"] = { escape = true, close = true, pair = "''", disabled_filetypes = { "haskell" } },
+		["'"] = { escape = true, close = true, pair = "''", disabled_filetypes = { "haskell", "typst", "markdown" } },
 
 		["$"] = { escape = true, close = true, pair = "$$", enabled_filetypes = { "typst", "markdown" } },
 	},
