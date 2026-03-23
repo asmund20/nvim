@@ -106,10 +106,18 @@ require("conform").setup({
 	formatters_by_ft = {
 		python = { "autopep8", "isort" },
 		haskell = { "fourmolu" },
+        nix = { "nixfmt" },
 	},
 
 	format_on_save = {
 		timeout_ms = 1000,
 		lsp_format = "fallback",
 	},
+})
+
+vim.lsp.enable("nil")
+vim.lsp.config("nil", {
+    cmd = { "nil" },
+    filetype = { "nix" },
+    root_markers = { "flake.nix", ".git" },
 })
