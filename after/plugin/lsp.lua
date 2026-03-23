@@ -44,11 +44,11 @@ lsp_zero.extend_lspconfig({
 })
 
 require("mason").setup({
-	ensure_installed = { "isort", "autopep8", "fourmolu" },
+	ensure_installed = { }, -- "isort", "autopep8", "fourmolu" },
 })
 
 require("mason-lspconfig").setup({
-	ensure_installed = { "pylsp", "tinymist", "clangd", "typos_lsp", "hls" },
+	ensure_installed = { }, -- "pylsp", "tinymist", "clangd", "typos_lsp", "hls" },
 	handlers = {
 		function(server_name)
 			require("lspconfig")[server_name].setup({})
