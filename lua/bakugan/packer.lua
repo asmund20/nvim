@@ -15,10 +15,6 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    use "williamboman/mason.nvim"
-    use "williamboman/mason-lspconfig.nvim"
-
-
     use {
         "VonHeikemen/lsp-zero.nvim", branch = "v4.x"
     }

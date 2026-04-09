@@ -43,43 +43,6 @@ lsp_zero.extend_lspconfig({
 	capabilities = require("cmp_nvim_lsp").default_capabilities(),
 })
 
-require("mason").setup({
-	ensure_installed = { }, -- "isort", "autopep8", "fourmolu" },
-})
-
-require("mason-lspconfig").setup({
-	ensure_installed = { }, -- "pylsp", "tinymist", "clangd", "typos_lsp", "hls" },
-	handlers = {
-		function(server_name)
-			require("lspconfig")[server_name].setup({})
-		end,
-		["tinymist"] = function()
-			require("lspconfig").tinymist.setup({
-				settings = {
-					formatterMode = "typstyle",
-				},
-				on_attach = function(client, bufnr)
-					vim.keymap.set("n", "<leader>tp", function()
-						client:exec_cmd({
-							title = "pin",
-							command = "tinymist.pinMain",
-							arguments = { vim.api.nvim_buf_get_name(0) },
-						}, { bufnr = bufnr })
-					end, { desc = "[T]inymist [P]in", noremap = true })
-
-					vim.keymap.set("n", "<leader>tu", function()
-						client:exec_cmd({
-							title = "unpin",
-							command = "tinymist.pinMain",
-							arguments = { vim.v.null },
-						}, { bufnr = bufnr })
-					end, { desc = "[T]inymist [U]npin", noremap = true })
-				end,
-			})
-		end,
-	},
-})
-
 local cmp = require("cmp")
 local cmp_select = { behavior = cmp.SelectBehavior.select }
 
