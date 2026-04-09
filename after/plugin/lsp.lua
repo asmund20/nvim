@@ -118,6 +118,6 @@ require("conform").setup({
 vim.lsp.enable("nil")
 vim.lsp.config("nil", {
     cmd = { "nil" },
-    filetype = { "nix" },
+    filetypes = { "nix" },
     root_markers = { "flake.nix", ".git" },
 })
