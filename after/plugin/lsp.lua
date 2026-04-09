@@ -84,3 +84,10 @@ vim.lsp.config("nil", {
     filetypes = { "nix" },
     root_markers = { "flake.nix", ".git" },
 })
+
+vim.lsp.enable("tinymist")
+vim.lsp.config("tinymist", {
+    cmd = { "tinymist" },
+    filetypes = { "typst" },
+    root_markers = { "main.typ", ".git" },
+})

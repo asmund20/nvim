@@ -1,5 +1,4 @@
 require 'typst-preview'.setup {
-    -- Setting this true will enable printing debug information with print()
     debug = false,
 
     -- Custom format string to open the output link provided with %s
@@ -19,9 +18,8 @@ require 'typst-preview'.setup {
     -- Warning: Be aware that your version might be older than the one
     -- required.
     dependencies_bin = {
-        -- if you are using tinymist, just set ['typst-preview'] = "tinymist".
-        ['typst-preview'] = "tinymist",
-        ['websocat'] = nil
+        tinymist = vim.fn.exepath('tinymist'),
+        websocat = vim.fn.exepath('websocat')
     },
 
     -- This function will be called to determine the root of the typst project
