@@ -98,3 +98,9 @@ vim.lsp.config("hls", {
     filetypes = { "haskell", "lhaskell" },
     root_markers = { "cabal.project", "cabal.project.local", "*.cabal", "stack.yaml", ".git" }
 })
+
+vim.lsp.enable("nuls")
+vim.lsp.config("nuls", {
+    cmd = { "nu", "--lsp" },
+    filetypes = { "nu", "nushell" },
+})
