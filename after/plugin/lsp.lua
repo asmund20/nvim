@@ -102,5 +102,12 @@ vim.lsp.config("hls", {
 vim.lsp.enable("nuls")
 vim.lsp.config("nuls", {
     cmd = { "nu", "--lsp" },
-    filetypes = { "nu", "nushell" },
+    filetypes = { "nu" },
+})
+
+vim.lsp.enable("jdtls")
+vim.lsp.config("jdtls", {
+    cmd = { "jdtls" },
+    filetypes = { "java" };
+    root_mrakers = { ".git" },
 })
