@@ -109,5 +109,5 @@ vim.lsp.enable("jdtls")
 vim.lsp.config("jdtls", {
     cmd = { "jdtls" },
     filetypes = { "java" };
-    root_mrakers = { ".git" },
+    root_mrakers = { "build.xml", ".git" },
 })
