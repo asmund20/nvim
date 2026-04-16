@@ -1,3 +1,1 @@
--- soft wrap
-vim.opt.wrap = true
-vim.opt.linebreak = true
+vim.opt_local.formatoptions:append("t")

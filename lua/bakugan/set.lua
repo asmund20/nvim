@@ -12,7 +12,10 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.textwidth = 80
+
+vim.opt.formatoptions:remove({ "t" })
+vim.opt.formatoptions:append({ "c", "q", "j" })
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
