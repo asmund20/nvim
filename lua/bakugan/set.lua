@@ -14,8 +14,8 @@ vim.opt.smartindent = true
 
 vim.opt.textwidth = 80
 
-vim.opt.formatoptions:remove({ "t" })
-vim.opt.formatoptions:append({ "c", "q", "j" })
+vim.opt.formatoptions:remove("t")
+vim.opt.formatoptions:append("cqj")
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
