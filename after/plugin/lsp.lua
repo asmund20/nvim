@@ -96,7 +96,12 @@ vim.lsp.enable("hls")
 vim.lsp.config("hls", {
     cmd = { "haskell-language-server-wrapper", "--lsp" },
     filetypes = { "haskell", "lhaskell" },
-    root_markers = { "cabal.project", "cabal.project.local", "*.cabal", "stack.yaml", ".git" }
+    root_markers = { "cabal.project", "cabal.project.local", "*.cabal", "stack.yaml", ".git" },
+    settings = {
+        haskell = {
+            formattingProvider = "formolu",
+        },
+    },
 })
 
 vim.lsp.enable("nuls")
