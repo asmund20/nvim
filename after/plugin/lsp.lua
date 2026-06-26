@@ -53,6 +53,13 @@ require("mason-lspconfig").setup({
 		function(server_name)
 			require("lspconfig")[server_name].setup({})
 		end,
+        ["clangd"] = function()
+            require("lspconfig").clangd.setup({
+                settings = {
+                    cmd = {"clangd", "--compile-commands-dir=build"},
+                },
+            })
+        end,
 		["tinymist"] = function()
 			require("lspconfig").tinymist.setup({
 				settings = {
