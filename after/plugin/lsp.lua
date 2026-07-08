@@ -56,7 +56,7 @@ require("mason-lspconfig").setup({
         ["clangd"] = function()
             require("lspconfig").clangd.setup({
                 settings = {
-                    cmd = {"clangd", "--compile-commands-dir=build"},
+                    cmd = {"clangd", "--compile-commands-dir=build_cmake"},
                 },
             })
         end,
@@ -111,7 +111,7 @@ cmp.setup({
 -- formatter setup. Ensure all formatters are installed by Mason
 require("conform").setup({
 	formatters_by_ft = {
-		python = { "autopep8", "isort" },
+		python = { "black", "autopep8", "isort" },
 		haskell = { "fourmolu" },
 	},
 
