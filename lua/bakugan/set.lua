@@ -20,7 +20,3 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
-
--- folding
-vim.opt.foldlevel = 1
-vim.opt.foldlevelstart = 1
