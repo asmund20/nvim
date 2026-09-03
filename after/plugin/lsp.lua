@@ -111,8 +111,7 @@ cmp.setup({
 -- formatter setup. Ensure all formatters are installed by Mason
 require("conform").setup({
 	formatters_by_ft = {
-		python = { "ruff_format" },
-		haskell = { "fourmolu" },
+		python = { "ruff_format", "ruff_organize_imports" },
 	},
 
 	format_on_save = {
